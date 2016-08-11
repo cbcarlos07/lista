@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style> 
+           body {
+    overflow-x: hidden;
+}
+#slideout {
+    background: #666;
+    position: absolute;
+    width: 280px;
+    height: 80px;
+    top: 45%;
+    right:-280px;
+    padding-left: 20px
+}
+    
+#clickme {
+    position: absolute;
+    top: 0; left: 0;
+    height: 20px;
+    width: 20px;
+    background: #ff0000;
+}
+
+#slidecontent {
+    float:left;
+}
+
+        </style>
+        <script src="js/jquery-3.1.0.js"></script>
+        <script>
+           $(function () {
+                var rightVal = -280;
+                $("#clickme").click(function () {
+                    rightVal = (rightVal * -1) - 280;
+                    $(this).parent().animate({right: rightVal + 'px'}, {queue: false, duration: 500});
+                });
+            });
+            
+        </script>
+    </head>
+    
+    <body>
+               <div id="slideout">
+                <div id="slidecontent">
+                    Yar, there be dragonns herre!
+                </div>
+                <div id="clickme">
+                </div>
+            </div>
+
+        
+    </body>
+</html>

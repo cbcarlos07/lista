@@ -1,0 +1,14 @@
+#main {
+  margin-top: 50px;
+}
+
+.divCor{
+    background: #007fff;
+}
+
+tbody{
+    font-size: 12px;
+}
+thead{
+    font-size: 14px;
+}
